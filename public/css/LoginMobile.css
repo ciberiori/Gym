@@ -1,0 +1,379 @@
+* {
+
+	margin: 0px;
+	padding: 0px;
+
+}
+
+.Login-Principal-Container {
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+}
+
+.Login-Container-Ingresar {
+
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	transition: 0.4s all ease;
+
+}
+
+.Formulario-Ingresar-Abierto {
+
+	left: 0%;
+
+}
+
+.Formulario-Ingresar-Cerrado {
+
+	left: -100%;
+
+}
+
+.Login-Ingresar-Fondo {
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url('../images/FondoLoginMobile.jpg');
+	background-size: 100% 100%;
+
+}
+
+.Login-Ingresar-Titulo {
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 30%;
+	color: white;
+
+}
+
+.Login-Ingresar-Container-Titulo {
+
+	position: absolute;
+	top: 50%;
+	left: 53%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+}
+
+.Login-Ingresar-Titulo-Logo {
+
+	font-size: 120px;
+    border-bottom: 6px solid wheat;
+
+}
+
+.Login-Ingresar-Titulo-Login {
+
+	font-size: 50px;
+    margin: 30px 0px 0px 0px;
+
+}
+
+.Login-Ingresar-Formulario {
+
+	position: absolute;
+	top: 30%;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+
+}
+
+.Elemento {
+
+	position: absolute;
+	top: 45%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: 80%;
+
+}
+
+.Elemento-Registrarse .Login-btnFormulario {
+
+	top: 10%;
+
+}
+
+.Login-Ingresar-RegistrarUsuario {
+
+	position: absolute;
+	top: 80%;
+	left: 0px;
+	width: 100%;
+	height: 20%;
+	color: white;
+
+}
+
+.Login-Ingresar-RegistrarUsuario span {
+
+	color: #3AF5DB;
+
+}
+
+.Login-Ingresar-btnRegistro {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, 50%);
+	font-size: 30px;
+	text-align: center;
+
+}
+
+.Campo {
+
+	position: relative;
+	left: 50%;
+	width: 80%;
+	height: 100px;
+	overflow: hidden;
+	transform: translateX(-50%);
+	margin: 30px 0px 30px;
+
+}
+
+.Campo input {
+
+	width: 100%;
+	height: 100%;
+	padding-top: 3%;
+	padding-left: 8px;
+	border: none;
+	outline: 0px;
+	font-size: 22px;
+	background: none;
+	border-bottom: 3px solid white;
+	color: white;
+
+}
+
+.Campo-Registrar input {
+
+	border-bottom: 3px solid black;
+	color: black;
+
+}
+
+.Campo .lbl-Campo {
+
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 3px solid white;
+	font-size: 30px;
+	color: wheat;
+
+}
+
+.Campo-Registrar .lbl-Campo {
+
+	border-bottom: 3px solid black;
+
+}
+
+.Campo .lbl-Campo:after {
+
+	content: '';
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	width: 100%;
+	height: 100%;
+	border-bottom: 3px solid #2ecece;
+	transform: translateX(-150%);
+	transition: all 0.3s ease;
+
+}
+
+.Campo .txt-Campo {
+
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all 0.3s ease;
+	color: white;
+
+}
+
+.Campo-Registrar .txt-Campo {
+
+	color: black;
+
+}
+
+.Campo input:focus + .lbl-Campo .txt-Campo,
+.Campo input:valid + .lbl-Campo .txt-Campo {
+
+	transform: translateY(-160%);
+	font-size: 34px;
+	color: #2ecece;
+
+}
+
+.Campo input:focus + .lbl-Campo:after {
+
+	transform: translateX(0%);
+
+}
+
+.Login-btnFormulario {
+
+	position: relative;
+	top: 30%;
+	left: 50%;
+	width: 60%;
+	height: 100px;
+	transform: translate(-50%, -50%);
+	border: none;
+	font-size: 30px;
+	border-radius: 12px;
+	background: #01A8E9;
+	color: white;
+
+}
+
+.Login-Container-Registrar {
+
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	transition: 0.4s all ease;
+
+}
+
+.Formulario-Registrarse-Abierto {
+
+	right: 0%;
+
+}
+
+.Formulario-Registrarse-Cerrado {
+
+	right: -100%;
+
+}
+
+.Login-Registrar-Titulo,
+.Login-Registrarse-Ingresar {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 10%;
+	background: #212529;
+	color: white;
+
+}
+
+.Login-Registrar-Titulo {
+
+	display: flex;
+
+}
+
+.Login-Registrar-Titulo-Titulo {
+
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 50%;
+	height: 80%;
+	transform: translate(-50%, -50%);
+	display: flex;
+
+}
+
+.Login-Registrar-Titulo-Titulo div {
+
+	position: relative;
+	top: 50%;
+	left: 0px;
+	width: 50%;
+	height: 80%;
+	transform: translateY(-50%);
+
+}
+
+.Login-Registrar-Titulo-Titulo div span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 32px;
+
+}
+
+.Login-Registrar-Titulo-Titulo div:first-child {
+
+	border-right: 5px solid wheat;
+
+}
+
+.Login-Registrar-Titulo-Titulo div:first-child span {
+
+	font-size: 70px;
+
+}
+
+.Login-Registrar-Formulario {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 80%;
+
+}
+
+.Login-Registrarse-Ingresar div {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	height: 50%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+}
+
+.Login-Registrarse-Ingresar div span,
+.Login-Registrarse-Ingresar div p {
+
+	font-size: 32px;
+
+}
+
+.Login-Registrarse-Ingresar div span {
+
+	color: #3AF5DB;
+
+}

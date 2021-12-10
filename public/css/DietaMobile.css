@@ -1,0 +1,410 @@
+.Dieta-Horarios {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 20%;
+
+}
+
+.Dieta-Horarios ul {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: 80%;
+	list-style: none;
+	display: flex;
+	transform: translate(-50%, -50%);
+
+}
+
+.Dieta-Horarios ul li {
+
+	position: relative;
+	top: 50%;
+	left: 0px;
+	width: 33.3%;
+	height: 80%;
+	margin: 0px 20px;
+	background: #AF9845;
+	border-radius: 24px;
+	transform: translateY(-50%);
+	transition: 0.4s all ease;
+
+}
+
+.Dieta-Horarios ul .Dieta-Horario-Selected-btn {
+
+	background: #212529;
+
+}
+
+.Dieta-Horarios ul li span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+	font-size: 36px;
+
+}
+
+.Dieta-Tabla-Dietas {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+
+}
+
+.Dieta-Container {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 90%;
+	height: 90%;
+	transform: translate(-50%, -50%);
+	border-radius: 24px;
+	overflow: hidden;
+
+}
+
+.Dieta-Container-Titulo {
+
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 15%;
+		background: #AF9845;
+
+}
+
+.Dieta-Container-Titulo span {
+
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	transform: translateY(-50%);
+	font-size: 40px;
+	color: white;
+
+}
+
+.Dieta-Container-btnControles {
+
+	position: absolute;
+	top: 50%;
+	right: 0px;
+	width: 50%;
+	height: 100%;
+	display: flex;
+
+}
+
+.Dieta-Container-btnControles button {
+
+	position: relative;
+	width: 200px;
+	height: 70px;
+	margin: 0px 20px;
+	transform: translateY(-50%);
+	font-size: 30px;
+
+}
+
+.Dieta-Container-Dietas {
+
+		position: relative;
+		top: 0px;
+		left: 0px;
+		width: 100%;
+		height: 85%;
+		background: white;
+
+}
+
+.Dieta-Container-Comida {
+
+	position: absolute;
+	top: 100%;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background: white;
+	transition: 0.6s all ease;
+	overflow: hidden;
+	z-index: 4;
+
+}
+
+.Selected-Dieta {
+
+	top: 0%;
+	z-index: 5;
+
+}
+
+.Dieta-Tabla-Comidas {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 90%;
+	height: 90%;
+	transform: translate(-50%, -50%);
+	display: flex;
+
+}
+
+.Dieta-Tabla-Comidas ul {
+
+	width: 50%;
+	list-style: none;
+
+}
+
+.Dieta-Tabla-Comidas ul li {
+
+	position: relative;
+	height: 10%;
+
+}
+
+.Dieta-Tabla-Comidas ul li:not(:first-child) {
+
+	margin: 10px 0px;
+
+}
+
+.Dieta-Tabla-Comidas ul li input {
+
+	position: absolute;
+	top: 0px;
+	left: 50%;
+	height: 100%;
+	width: 80%;
+	border: 2px solid black;
+	transform: translateX(-50%);
+	font-size: 28px;
+	text-align: center;
+	outline: none;
+
+}
+
+.labelCal {
+
+	position: absolute;
+    top: 50%;
+    right: 15%;
+    transform: translateY(-50%);
+    font-size: 32px;
+    overflow: hidden;
+
+}
+
+.Dieta-Tabla-Comidas ul li:first-child {
+
+	left: 50%;
+    width: 80%;
+    height: 15%;
+    background: #E7C137;
+    transform: translateX(-50%);
+	border-top-left-radius: 24px;
+	border-top-right-radius: 24px;
+
+}
+
+.Dieta-Tabla-Comidas ul li:first-child span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	font-size: 32px;
+	transform: translate(-50%, -50%);
+	color: white;
+
+}
+
+.Dieta-Comida-btnGuardar {
+
+	position: absolute;
+	bottom: 30px;
+	left: 50%;
+	width: 260px;
+	height: 80px;
+	transform: translateX(-50%);
+	font-size: 30px;
+
+}
+
+.Dieta-Avance {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 30%;
+
+}
+
+.Dieta-Avance-IMC {
+
+	position: relative;
+	top: 0px;
+	left: 50%;
+	width: 90%;
+	height: 50%;
+	border-radius: 24px;
+	overflow: hidden;
+	background: white;
+	transform: translateX(-50%);
+
+}
+
+.Dieta-Avance-IMC .Dieta-Avance-Container:first-child {
+
+	height: 40%;
+	background: wheat;
+
+}
+
+.Dieta-Avance-IMC .Dieta-Avance-Container:nth-child(2) {
+
+	height: 60%;
+	background: white;
+
+}
+
+.Dieta-Avance-Container {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	display: flex;
+
+}
+
+.Dieta-Avance-IMC .Dieta-Avance-Titulo,
+.Dieta-Avance-IMC .Dieta-Avance-Contenido {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 30%;
+	height: 100%;
+	text-align: center;
+
+}
+
+.Dieta-Avance-IMC .Dieta-Avance-Titulo {
+
+	font-weight: bold;
+
+}
+
+.Dieta-Avance-IMC .Dieta-Avance-Titulo:nth-child(2),
+.Dieta-Avance-IMC .Dieta-Avance-Contenido:nth-child(2) {
+
+	width: 40%;
+
+}
+
+.Dieta-Avance-IMC .Dieta-Avance-Titulo span,
+.Dieta-Avance-IMC .Dieta-Avance-Contenido span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 32px;
+
+}
+
+.Dieta-Avance-IMC .Dieta-Avance-Contenido span {
+
+	font-size: 40px;
+
+}
+
+.Dieta-Avance-Calorias {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+	display: flex;
+
+}
+
+.Dieta-Avance-Calorias-Consumidas,
+.Dieta-Avance-Calorias-Quemadas {
+
+	position: relative;
+    top: 50%;
+    left: 5%;
+    width: 40%;
+    height: 90%;
+    background: white;
+    transform: translateY(-50%);
+    margin: 0px 10% 0px 0px;
+    border-radius: 24px;
+    overflow: hidden;
+
+}
+
+.Dieta-Avance-Calorias .Dieta-Avance-Titulo,
+.Dieta-Avance-Calorias .Dieta-Avance-Contenido {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+
+}
+
+.Dieta-Avance-Calorias .Dieta-Avance-Titulo {
+
+	height: 40%;
+	background: wheat;
+
+}
+
+.Dieta-Avance-Calorias .Dieta-Avance-Contenido {
+
+	height: 60%;
+
+}
+
+.Dieta-Avance-Calorias .Dieta-Avance-Titulo span,
+.Dieta-Avance-Calorias .Dieta-Avance-Contenido span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 100%;
+	transform: translate(-50%, -50%);
+	text-align: center;
+
+}
+
+.Dieta-Avance-Calorias .Dieta-Avance-Titulo span {
+
+	font-size: 38px;
+
+}
+
+.Dieta-Avance-Calorias .Dieta-Avance-Contenido span {
+
+	font-size: 40px;
+
+}

@@ -1,0 +1,439 @@
+* {
+
+	margin: 0px;
+	padding: 0px;
+
+}
+
+.Index-Fondo-Pantalla {
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(255, 255, 255, 0.6);
+	z-index: -1;
+
+}
+
+.IndexFondo-Index {
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	background-image: url('../Images/fondoIndexMobile.jpg');
+	background-size: 100% 100%;
+	z-index: -2;
+
+}
+
+.Index-Controlador {
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+
+}
+
+.Index-Panel-lateral {
+
+	position: absolute;
+	top: 0px;
+	left: -5px;
+	height: 100%;
+	width: 60%;
+	border-right: 5px solid wheat;
+	background: #212529;
+	transition: 0.4s all ease;
+	overflow: hidden;
+	z-index: 5;
+
+}
+
+.Index-Panel-lateral-Opciones {
+
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	height: 100%;
+	width: 40%;
+	border-left: 5px solid wheat;
+	background: #212529;
+	transition: 0.4s all ease;
+	overflow: hidden;
+	z-index: 5;
+
+}
+
+.Index-Panel-Abierto {
+
+	left: 0%;
+
+}
+
+.Index-Panel-Cerrado {
+
+	left: -60%;
+
+}
+
+.Index-Panel-Opciones-Abierto {
+
+	right: 0%;
+
+}
+
+.Index-Panel-Opciones-Cerrado {
+
+	right: -40%;
+
+}
+
+.Index-Panel-Panel-Opciones-Container {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 10%;
+
+}
+
+.Index-Panel-Opciones-Botones {
+
+	position: relative;
+	top: 5%;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+	color: white;
+
+}
+
+.Index-Container-Central {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 60%;
+	height: 80%;
+	transform: translate(-50%, -50%);
+	color: white;
+
+}
+
+.Index-Container-Central span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 34px;
+	text-align: center;
+
+}
+
+.Opciones-Logo-Boton {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 25%;
+	height: 100%;
+
+}
+
+.Opciones-Boton {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 75%;
+	height: 100%;
+
+}
+
+.Opciones-Boton span {
+
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	font-size: 30px;
+
+}
+
+.Index-Panel-Opciones-Botones li {
+
+	width: 100%;
+	height: 15%;
+	display: flex;
+
+}
+
+.Index-Panel-Opciones-Logo {
+
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	width: 100px;
+	height: 80%;
+	z-index: 4;
+	transform: translateY(-50%);
+	background-image: url('../Images/Logo-Opciones.png');
+	background-size: 100% 80%;
+    background-position-y: 20px;
+	background-repeat: no-repeat;
+
+}
+
+.Opciones-Panel-Corredizo {
+
+	position: relative;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	background: white;
+	overflow: hidden;
+	transition: 0.4s all ease;
+
+}
+
+.Contacto-Cerrado {
+
+	height: 0%;
+
+}
+
+.Contacto-Abierto {
+
+	height: 50%;
+
+}
+
+.Opciones-Informacion-Contacto {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: 80%;
+	transform: translate(-50%,-50%);
+	word-break: break-all;
+	color: black;
+
+}
+
+.Opciones-Informacion-Contacto div {
+
+	margin: 0px 0px 30px;
+
+}
+
+.Opciones-Informacion-Contacto p {
+
+	font-weight: bold;
+
+}
+
+.Opciones-Informacion-Contacto span {
+
+	font-size: 34px;
+
+}
+
+.Index-Panel-btnPanelCerrar {
+
+	position: absolute;
+	top: 40px;
+	right: 40px;
+	width: 100px;
+	height: 60px;
+	z-index: 6;
+	background-image: url('../Images/Logo-Menu.png');
+	background-size: 75% 100%;
+	background-repeat: no-repeat;
+
+}
+
+.Index-Panel-lateral-Logo {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 25%;
+
+}
+
+.Index-Panel-Logo {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	width: 80%;
+	height: 90%;
+	border-bottom: 3px solid wheat;
+
+}
+
+.Index-Panel-Logo span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 84px;
+	color: white;
+
+}
+
+.Index-Perfil-Usuario {
+
+	position: relative;
+	top: 20%;
+	left: 50%;
+	transform: translateX(-50%);
+	width: 80%;
+    height: 30%;
+    font-size: 46px;
+    color: white;
+    text-align: center;
+
+}
+
+.Index-Panel-lateral-Botones {
+
+	position: relative;
+	top: 30%;
+	left: 0px;
+	transform: translateY(-50%);
+	width: 100%;
+	height: 60%;
+	list-style: none;
+
+}
+
+.Index-Marcador {
+
+	position: absolute;
+	right: 25px;
+	width: 20px;
+	height: 100px;
+	border-radius: 42px;
+	background: #08C316;
+	transition: 0.4s all ease;
+
+}
+
+.Index-Panel-lateral-Footer {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 20%;
+
+}
+
+.Index-Panel-lateral-Botones li {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 15%;
+
+}
+
+.Index-Panel-lateral-Botones li span {
+
+	position: absolute;
+	top: 50%;
+	left: 10%;
+	transform: translateY(-50%);
+	font-size: 30px;
+	color: white;
+
+}
+
+.Index-Barra-Superior {
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 10%;
+	background: #212529;
+	border-bottom: 5px solid wheat;
+	color: white;
+	
+}
+
+.Index-Panel-btnPanelAbrir {
+
+	position: absolute;
+	top: 50%;
+	left: 8%;
+	width: 100px;
+	height: 60px;
+	z-index: 4;
+	transform: translateY(-50%);
+	background-image: url('../Images/Logo-Menu.png');
+	background-size: 75% 100%;
+	background-repeat: no-repeat;
+
+}
+
+.Index-Panel-Opciones {
+
+	position: absolute;
+	top: 50%;
+	right: 8%;
+	width: 100px;
+	height: 60px;
+	z-index: 4;
+	transform: translateY(-50%);
+	background-image: url('../Images/Logo-Opciones.png');
+	background-size: 100% 150%;
+    background-position-y: -15px;
+	background-repeat: no-repeat;
+
+}
+
+.Index-Container-Contents {
+
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	z-index: 0;
+
+}
+
+.Content {
+
+	position: absolute;
+	top: 10%;
+	left: 0px;
+	width: 100%;
+	height: 90%;
+	display: none;
+	z-index: 0;
+	overflow: hidden;
+
+}
+
+.Index-Container-Selected {
+
+	display: block;
+
+}

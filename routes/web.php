@@ -1,7 +1,8 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\UsuariosController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -13,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [FrontendController::class,"login"]);
+Route::get('/frontend',[FrontendController::class,"index"]);
+
+
+Route::get('/usuarios/obtenerUsuario',[UsuariosController::class,"ObtenerUsuarioUsuarioPassword"]);
+Route::get('/usuarios/validarRutUsuario',[UsuariosController::class,"ValidarRutUsuario"]);
+Route::get('/usuarios/validarEmailUsuario',[UsuariosController::class,"ValidarEmailUsuario"]);
+Route::get('/usuarios/registrarUsuario',[UsuariosController::class,"RegistrarUsuario"]);

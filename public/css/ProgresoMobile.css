@@ -1,0 +1,133 @@
+.Progreso-Panel-Botones {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 20%;
+
+}
+
+.Progreso-Panel-Botones ul {
+
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 80%;
+    height: 50%;
+    transform: translate(-50%, -50%);
+    list-style: none;
+    display: flex;
+
+}
+
+.Progreso-Panel-Botones ul li {
+
+	position: relative;
+    top: 5%;
+    left: 5%;
+    width: 25%;
+    height: 100%;
+    margin: 0px 10px 0px;
+    background: #AF9845;
+    border-radius: 16px;
+
+}
+
+.Progreso-Panel-Botones ul li span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 32px;
+	color: white;
+
+}
+
+.Progreso-Panel-Botones ul .Progreso-Selected-Lapso {
+
+	background: #212529;
+
+}
+
+.Progreso-Panel-Estadisticas {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 80%;
+	display: flex;
+
+}
+
+.Progreso-Container-Estadistica {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 50%;
+	height: 100%;
+
+}
+
+.Progreso-Container-Estadistica ul {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: 80%;
+	transform: translate(-50%, -50%);
+	list-style: none;
+
+}
+
+.Progreso-Container-Estadistica ul li {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 33.3%;
+	margin: 20px 0px;
+	border-radius: 16px;
+	overflow: hidden;
+
+}
+
+.Progreso-Titulo-Estadistica {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 30%;
+	background: wheat;
+
+}
+
+.Progreso-Numero-Estadistica {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 70%;
+	background: white;
+
+}
+
+.Progreso-Titulo-Estadistica span,
+.Progreso-Numero-Estadistica span {
+
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    font-size: 40px;
+    text-align: center;
+
+}

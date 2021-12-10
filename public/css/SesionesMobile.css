@@ -1,0 +1,244 @@
+.Sesiones-Container-Botones {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+
+}
+
+.Sesiones-Panel-Controles {
+
+	position: relative;
+	top: 50%;
+	left: 50%;
+	width: 80%;
+	height: 85%;
+	display: flex;
+	transform: translate(-50%, -50%);
+	border-bottom: 5px solid wheat;
+
+}
+
+.Sesiones-Panel-Botones {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 50%;
+	height: 100%;
+
+}
+
+.Sesiones-Panel-Botones ul {
+
+	list-style: none;
+
+}
+
+.Sesiones-Panel-Botones ul li {
+
+
+	margin: 50px 0px;
+
+}
+
+.Sesiones-Panel-Botones ul li div {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	background: wheat;
+	width: 100%;
+	height: 70px;
+	border-top-left-radius: 16px;
+	border-top-right-radius: 16px;
+
+}
+
+.Sesiones-Panel-Botones ul li div span {
+
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	transform: translateY(-50%);
+	font-size: 34px;
+
+}
+
+.Sesiones-Panel-Botones ul li select {
+
+	width: 100%;
+	height: 120px;
+	font-size: 22px;
+
+}
+
+.Sesiones-Container-btnBuscar {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	height: 100%;
+	width: 60%;
+
+}
+
+#Sesiones-btnBuscar {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 240px;
+	height: 120px;
+	transform: translate(-50%, -50%);
+	font-size: 28px;
+
+}
+
+.Sesiones-Container-Registro {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 70%;
+
+}
+
+.Sesiones-Resultados {
+
+	position: relative;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
+    height: 65%;
+
+}
+
+.Sesiones-Resultado-Repeticion {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 20%;
+	margin: 30px 0px;
+	border-radius: 24px;
+	display: flex;
+	overflow: hidden;
+
+}
+
+.Sesiones-Container-Fecha,
+.Sesiones-Container-Resultado {
+
+		position: relative;
+		top: 0px;
+		left: 0px;
+		height: 100%;
+
+}
+
+.Sesiones-Container-Fecha {
+
+	width: 40%;
+
+}
+
+.Sesiones-Container-Resultado {
+
+	width: 60%;
+	background: white;
+	color: black;
+	display: flex;
+
+}
+
+.Sesiones-Container-Fecha {
+
+	background: #C39924;
+	color: white;
+
+}
+
+.Sesiones-Resultado-Fecha,
+.Sesiones-Resultado-Tiempo {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 50%;
+
+}
+
+.Sesiones-Resultado-Fecha span,
+.Sesiones-Resultado-Tiempo span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+
+}
+
+.Sesiones-Resultado-Fecha span {
+
+	transform: translate(-50%, -35%);
+	font-size: 60px;
+
+}
+
+.Sesiones-Resultado-Tiempo span {
+
+	transform: translate(-50%, -70%);
+	font-size: 40px;
+
+}
+
+.Sesiones-Repeticion {
+
+	position: relative;
+	top: 50%;
+	left: 15%;
+	transform: translate(-50%, -50%);
+	width: 15%;
+	height: 100%;
+
+}
+
+.Sesiones-Rep, 
+.Sesiones-Peso {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 47.5%;
+
+}
+
+.Sesiones-Rep span, 
+.Sesiones-Peso span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 34px;
+
+}
+
+.Sesiones-Separador {
+
+	position: relative;
+	left: 50%;
+	width: 70%;
+	height: 2%;
+	transform: translateX(-50%);
+	background: black;
+	border-radius: 200px;
+
+}

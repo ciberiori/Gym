@@ -1,0 +1,258 @@
+.Actualizacion-Container-Principal {
+
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	height: 100%;
+	background: white;
+	transition: 0.4s all ease;
+	z-index: 6;
+
+}
+
+.Actualizacion-Cerrada {
+
+	right: -100%;
+
+}
+
+.Actualizacion-Abierta {
+
+	right: 0%;
+
+}
+
+.Actualizacion-Barra-Superior {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 10%;
+	background: #212529;
+	border-bottom: 5px solid wheat;
+
+}
+
+.Actualizacion-Barra-Superior span {
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 36px;
+	color: white;
+
+}
+
+#Actualizacion-btnAtras {
+
+	position: absolute;
+	top: 50%;
+	left: 50px;
+	width: 20%;
+	height: 80%;
+	transform: translateY(-50%);
+	background: url(../Images/Flecha.png);
+    background-position-x: center;
+    background-position-y: center;
+    background-size: 70% 70%;
+    background-repeat: no-repeat;
+
+}
+
+.Actualizacion-Datos-Personales {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 45%;
+
+}
+
+.Actualizacion-Credenciales {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 45%;
+
+}
+
+.Actualizacion-Titulo {
+
+	position: relative;
+	top: 0px;
+	left: 50%;
+	width: 80%;
+	height: 15%;
+	border-bottom: 2px solid black;
+	transform: translateX(-50%);
+
+}
+
+.Actualizacion-Titulo span {
+
+	position: absolute;
+	top: 50%;
+	left: 30px;
+	font-size: 40px;
+	transform: translateY(-50%);
+
+}
+
+.Actualizacion-Datos {
+
+	position: relative;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	height: 60%;
+
+}
+
+.Actualizacion-Datos-Personales button,
+.Actualizacion-Credenciales button {
+
+	position: relative;
+	left: 15%;
+	width: 260px;
+	height: 80px;
+	font-size: 28px;
+
+}
+
+.Actualizacion-Datos-Personales button {
+
+	top: 70px;
+
+}
+
+.Actualizacion-Credenciales button {
+
+	top: 0px;
+
+}
+
+.Elemento {
+
+	position: relative;
+	top: 45%;
+	left: 45%;
+	width: 80%;
+	height: 80%;
+	transform: translate(-50%, -50%);
+
+}
+
+.Campo {
+
+	position: relative;
+	left: 50%;
+	width: 80%;
+	height: 100px;
+	overflow: hidden;
+	transform: translateX(-50%);
+	margin: 30px 0px 30px;
+
+}
+
+.Campo input {
+
+	width: 100%;
+	height: 100%;
+	padding-top: 3%;
+	padding-left: 8px;
+	border: none;
+	outline: 0px;
+	font-size: 22px;
+	background: none;
+	border-bottom: 3px solid white;
+	color: white;
+
+}
+
+.Campo input {
+
+	border-bottom: 3px solid black;
+	color: black;
+
+}
+
+.Campo .lbl-Campo {
+
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
+	border-bottom: 3px solid white;
+	font-size: 30px;
+	color: wheat;
+
+}
+
+.Campo .lbl-Campo {
+
+	border-bottom: 3px solid black;
+
+}
+
+.Campo .lbl-Campo:after {
+
+	content: '';
+	position: absolute;
+	left: 0px;
+	bottom: -1px;
+	width: 100%;
+	height: 100%;
+	border-bottom: 3px solid #2ecece;
+	transform: translateX(-150%);
+	transition: all 0.3s ease;
+
+}
+
+.Campo .txt-Campo {
+
+	position: absolute;
+	bottom: 5px;
+	left: 0px;
+	transition: all 0.3s ease;
+	color: white;
+
+}
+
+.Campo .txt-Campo {
+
+	color: black;
+
+}
+
+.Campo input:focus + .lbl-Campo .txt-Campo,
+.Campo input:valid + .lbl-Campo .txt-Campo {
+
+	transform: translateY(-160%);
+	font-size: 34px;
+	color: #2ecece;
+
+}
+
+.Campo input:focus + .lbl-Campo:after {
+
+	transform: translateX(0%);
+
+}
+
+#btnCerrar-Actualizacion {
+
+	position: absolute;
+	bottom: 200px;
+	left: 10%;
+	width: 260px;
+	height: 60px;
+	font-size: 26px;
+
+}
