@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Model\Usuario;
+use App\Model\RegionCuerpo;
 
 class FrontendController extends Controller
 {
@@ -17,12 +18,12 @@ class FrontendController extends Controller
                  $q->where("Fecha","=",$fecha);
             }])
              ->first();
-             
-    $reps=$usuario->repeticiones;
 
+    $regiones=RegionCuerpo::get();
    
     return view("frontend.index")
-               ->with("usuario",$usuario);
+               ->with("usuario",$usuario)
+               ->with("regiones",$regiones);
    }
 
 

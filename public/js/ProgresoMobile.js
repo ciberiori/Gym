@@ -23,8 +23,7 @@ $(document).ready(function() {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/progeso/obtenerFechaActual',
 			data: {'Metodo' : Metodo},
 			dataType: 'json',
 			async: false,
@@ -54,8 +53,7 @@ $(document).ready(function() {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/progreso/obtenerSemanaActual',
 			data: {'Metodo' : Metodo},
 			dataType: 'json',
 			async: false,
@@ -85,8 +83,7 @@ $(document).ready(function() {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/progreso/obtenerMesActual',
 			data: {'Metodo' : Metodo},
 			dataType: 'json',
 			async: false,
@@ -108,8 +105,7 @@ $(document).ready(function() {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/progreso/obtenerAnioActual',
 			data: {'Metodo' : Metodo},
 			dataType: 'json',
 			async: false,
@@ -139,8 +135,7 @@ $(document).ready(function() {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/progreso/obtenerAnioActual',
 			data: {'Metodo' : Metodo},
 			dataType: 'json',
 			async: false,
@@ -178,8 +173,7 @@ $(document).ready(function() {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/progreso/obtenerDatosProgreso',
 			data: jsonData,
 			dataType: 'json',
 			async: true,

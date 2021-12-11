@@ -210,21 +210,133 @@
                 </div>
                 <div class="Progreso-Panel-Estadisticas">
     
+                    @php 
+                     $cantidad=count($usuario->repeticiones);
+                     $contRep = 0;
+				     $contPeso = 0;
+				     $divisor = 0;
+                     
+                    @endphp
+
+                    @for($i = 0; $i < $cantidad; $i++) 
+
+                       @php 
+                         $objRepeticion = json_decode($usuario->repeticiones[$i]->Repeticion, true);
+					     $contArray = count($objRepeticion["Repeticiones"]);
+
+                         
+                       @endphp 
+
+                       @for($b = 0; $b < $contArray; $b++) 
+                         @php
+                           $arrayRep =  $objRepeticion["Repeticiones"][$b];
+                           $contRep += $arrayRep["R"];
+                           $contPeso += $arrayRep["P"];
+                           $divisor++;
+                         @endphp
+                       @endfor
+                       @endfor
+
+                       @if($divisor) {
+                         @php
+                           $contPeso = round($contPeso/$divisor);
+                         @endphp    
+                       @endif
+
+                       @php
+                         $hora = 0;
+				         $minutos = 0;
+				         $segundos = 0;
+                         $minutosCalorias = 0;
+                       @endphp
                     
-                    
+                       @for($i = 0; $i < $cantidad; $i++)
+                       @php
+                         $tiempo = $usuario->repeticiones[$i]->Tiempo;
+                         $find = ":";
+
+                         $hrs = intval(substr($tiempo, 0, strpos($tiempo, $find)));
+                         $tiempo = substr($tiempo, strpos($tiempo, $find)+1, strlen($tiempo)-1);
+
+                         $min = intval(substr($tiempo, 0, strpos($tiempo, $find)));
+                         $seg = intval(substr($tiempo, strpos($tiempo, $find)+1, strlen($tiempo)-1));
+
+                         $hora += $hrs;
+                         $minutos += $min;
+                         $minutosCalorias += $min;
+                         $segundos += $seg;
+
+                         if($minutos >= 60) {
+
+                         $hora += 1;
+                         $minutos += -60;
+
+                         }
+
+                         if($segundos >= 60) {
+
+                         $minutos += 1;
+                         $minutosCalorias += 1;
+                         $segundos += -60;
+                        }
+                       @endphp
+                       @endfor
+                       
+                       @php
+
+                        $textoHora = "";
+                        $textoMinuto = "";
+                        $textoSegundo = "";
+
+                        if($segundos < 10) {
+
+                            $textoSegundo = "0" . $segundos;
+
+                        } else {
+
+                            $textoSegundo = $segundos;
+
+                        }
+
+                        if($minutos < 10) {
+
+                            $textoMinuto = "0" . $minutos;							
+
+                        } else {
+
+                            $textoMinuto = $minutos;
+
+                        }
+
+                        if($hora < 10) {
+
+                            $textoHora = "0" . $hora;
+
+                        } else {
+
+                            $textoHora = $hora;
+
+                        }
+
+                        $tiempo = $textoHora . ":" . $textoMinuto . ":" . $textoSegundo;
+
+                        $met = 4.8;
+                        $calorias = ((session()->get('Peso')* $met) * 0.0175) * $minutosCalorias;
+                       @endphp
+
                     <div class="Progreso-Container-Estadistica">
                         <ul>
                             <li>
                                 <div class="Progreso-Titulo-Estadistica"><span>Actividades Realizadas</span></div>
-                                <div class="Progreso-Numero-Estadistica"><span id="Progreso-CantActividades"></span></div>
+                                <div class="Progreso-Numero-Estadistica"><span id="Progreso-CantActividades">{{ $cantidad }}</span></div>
                             </li>
                             <li>
                                 <div class="Progreso-Titulo-Estadistica"><span>Repeticiones Total</span></div>
-                                <div class="Progreso-Numero-Estadistica"><span id="Progreso-RepTotales"></span></div>
+                                <div class="Progreso-Numero-Estadistica"><span id="Progreso-RepTotales">{{ $contRep }}</span></div>
                             </li>
                             <li>
                                 <div class="Progreso-Titulo-Estadistica"><span>Peso Levantado (Promedio)</span></div>
-                                <div class="Progreso-Numero-Estadistica"><span id="Progreso-PesoPromedio"></span></div>
+                                <div class="Progreso-Numero-Estadistica"><span id="Progreso-PesoPromedio">{{ $contPeso }}</span></div>
                             </li>
                         </ul>
                     </div>
@@ -233,11 +345,11 @@
                         <ul>
                             <li>
                                 <div class="Progreso-Titulo-Estadistica"><span>Tiempo Ejercitado</span></div>
-                                <div class="Progreso-Numero-Estadistica"><span id="Progreso-TiempoEntrenado"></span></div>
+                                <div class="Progreso-Numero-Estadistica"><span id="Progreso-TiempoEntrenado">{{ $tiempo }}</span></div>
                             </li>
                             <li>
                                 <div class="Progreso-Titulo-Estadistica"><span>Calorias Quemadas</span></div>
-                                <div class="Progreso-Numero-Estadistica"><span id="Progreso-CaloriasQuemadas"></span></div>
+                                <div class="Progreso-Numero-Estadistica"><span id="Progreso-CaloriasQuemadas">{{ $calorias }}</span></div>
                             </li>
                             <li>
                                 <div class="Progreso-Titulo-Estadistica"><span>???</span></div>
@@ -267,8 +379,10 @@
                                     <td>
                                         <select id="Repeticiones-cajaRegion">
                                             <option value="">Selecciona una Region</option>
-    
-    
+                                            @foreach ($regiones as $r)
+                                                <option value="{{ $r->ID_Region }}">{{ $r->Region }}</option>
+                                            @endforeach
+      
                                         </select>
                                     </td>
                                 </tr>

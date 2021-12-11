@@ -277,8 +277,7 @@ $(document).ready(function() {
 				$.ajax({
 
 					type: 'GET',
-					url: 'Consultas/DataConsulter.php',
-					contentType: 'application/json; charset=utf-8',
+					url: '/repeticiones/guardarRepeticiones',
 					data: datos,
 					dataType: 'json',
 					async: true,
@@ -361,8 +360,7 @@ $(document).ready(function() {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/repeticiones/obtenerAreasPorRegion',
 			data: {'Metodo' : Metodo, 'Region' : region},
 			dataType: 'json',
 			async: true,
@@ -430,8 +428,7 @@ function loadEjercicios(area) {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/repeticiones/obtenerEjerciciosPorArea',
 			data: {'Metodo' : Metodo, 'Area' : area},
 			dataType: 'json',
 			async: true,
@@ -496,8 +493,7 @@ function lastRutina(ejercicio) {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/repeticiones/obtenerDescripcionEjercicio',
 			data: {'Metodo' : Metodo, 'Ejercicio' : ejercicio},
 			dataType: 'json',
 			async: false,
@@ -525,8 +521,7 @@ function lastRutina(ejercicio) {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/repeticiones/obtenerUltimoResultadoEjercicio',
 			data: {'Metodo' : Metodo, 'ID_Usuario' : usuario, 'Ejercicio' : ejercicio},
 			dataType: 'json',
 			async: false,
@@ -772,8 +767,7 @@ function startInterval() {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/repeticiones/obtenerCalculoCaloriasDiarias',
 			data: {'Metodo' : Metodo, 'ID_Usuario' : usuario},
 			dataType: 'json',
 			async: false,
