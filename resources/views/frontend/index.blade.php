@@ -849,12 +849,15 @@
                             </div>
                         </div>
                         <div class="Dieta-Container-Dietas">
+                            @php
+                               $caloriasTotales = 0;
+                            @endphp
                            @for($i = 0; $i < count($comidas); $i++)
                            
                             @php
-
+                                $objJson = array();
                                 for($a = 0; $a < count($dieta); $a++) {
-
+                                    
                                 if($comidas[$i]->ID_Comida == $dieta[$a]->ID_Comida) {
                                     $objJson = json_decode($dieta[$a]->Dieta, true);
                                     break;
@@ -887,9 +890,10 @@
                                     </ul>
                                     <ul>
                                     <li><span>Calorias</span></li>
-    
+                                    
                                     @for($c = 0; $c < count($objJson["Dieta"]); $c++) 
                                       @php 
+                                        
                                         $caloriasTotales += $objJson["Dieta"][$c]["Calorias"];
                                       @endphp
                                         <li><input type='number' class='Dieta-Calorias' value="{{ $objJson["Dieta"][$c]["Calorias"] }}"><span class='labelCal'>Kl</span></li>
@@ -949,9 +953,10 @@
 
                             @php 
 
-							$alturaCuadrado = session()->get('Esatura') * session()->get('Esatura');
+							$alturaCuadrado = session()->get('Estatura') * session()->get('Estatura');
 
 							$IMC = session()->get('Peso') / $alturaCuadrado;
+                         
 							$rangoBajo = 18.5 * $alturaCuadrado;
 							$rangoAlto = 25 * $alturaCuadrado;
 
@@ -960,7 +965,7 @@
 
 							$pesoIdeal = ($rangoBajo + $rangoAlto)/2;
 							$pesoIdeal = number_format($pesoIdeal, 2);
-
+                            
 						@endphp
     
                             <div class="Dieta-Avance-Contenido">
@@ -985,7 +990,7 @@
                                 <span>Calorias diarias consumidas</span>
                             </div>
                             <div class="Dieta-Avance-Contenido">
-                                 <span></span>
+                                 <span>{{ $caloriasTotales }}</span>
                             </div>
     
                         </div>
@@ -995,7 +1000,7 @@
                                 <span>Calorias diarias quemadas</span>
                             </div>
                             <div class="Dieta-Avance-Contenido">
-                                 <span id="Dieta-Avance-Calorias-Quemadas-Titulo"></span>
+                                 <span id="Dieta-Avance-Calorias-Quemadas-Titulo">{{ number_format($calorias, 2) }}</span>
                             </div>
     
                         </div>

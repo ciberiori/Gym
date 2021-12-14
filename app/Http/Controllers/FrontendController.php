@@ -29,7 +29,7 @@ class FrontendController extends Controller
     $regiones=RegionCuerpo::get();
     $comidas=Comida::get();
 
-
+    //\DB::enableQueryLog(); 
     $dieta=Dieta::where("ID_Usuario",$request->session()->get("ID_Usuario"))
                   ->where(function($q){
                      $comidas=Comida::get();
@@ -37,6 +37,8 @@ class FrontendController extends Controller
                        $q->orWhere("ID_Comida",$c->ID_Comida);
                      }
                   })->get();
+   //dd(\DB::getQueryLog());
+
   
     return view("frontend.index")
                ->with("usuario",$usuario)

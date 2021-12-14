@@ -51,6 +51,10 @@ class UsuariosController extends Controller
 
         if(!$res){
             return response()->json(false);
+        }else{
+            session()->put("Usuario",$nombre);
+            session()->put("peso",$peso);
+            session()->put("Estatura",$estatura);
         }
 
         return response()->json(true);
@@ -71,6 +75,9 @@ class UsuariosController extends Controller
 
         if(!$res){
             return response()->json(false);
+        }else{
+            
+            session()->put("Pass",$pass);
         }
 
         return response()->json(true);
