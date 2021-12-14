@@ -9,6 +9,7 @@ class Usuario extends Model
 {
     protected $table="usuarios";
     public $timestamps = false;
+    public $primaryKey  = 'ID_Usuario';
 
 
     public function repeticiones(){

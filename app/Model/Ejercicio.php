@@ -8,4 +8,9 @@ class Ejercicio extends Model
 {
     protected $table="ejercicio";
     public $timestamps = false;
+
+    public function repeticiones(){
+
+        return $this->hasMany(Repeticion::class);
+    }
 }

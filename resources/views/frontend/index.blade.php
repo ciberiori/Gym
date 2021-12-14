@@ -688,7 +688,12 @@
                                     <select id="Sesiones-cajaRegion">
                                         
                                         <option value="">Selecciona una Region</option>
-    
+                                        
+                                            @foreach ($regiones as $r)
+                                                <option value="{{ $r->ID_Region }}">{{ $r->Region }}</option>
+                                            @endforeach
+      
+                                        
     
                                     </select>
                                 </li>
@@ -811,7 +816,24 @@
                 <div class="Dieta-Horarios">
     
                     <ul>
-    
+                   @for($i = 0; $i < count($comidas); $i++)
+                     @php
+                         if($i <= 0) {
+
+                            echo "<li class='Dieta-Horario-btn Dieta-Horario-Selected-btn'>";
+
+                            } else {
+
+                            echo "<li class='Dieta-Horario-btn'>";
+
+                            }
+                     @endphp
+
+                     <span>{{ $comidas[$i]->Comida }}</span>
+                     <input type='hidden' class='Dieta-ID_Dieta'>
+                        </li>
+                   @endfor
+
                     </ul>
     
                 </div>
@@ -827,7 +849,78 @@
                             </div>
                         </div>
                         <div class="Dieta-Container-Dietas">
+                           @for($i = 0; $i < count($comidas); $i++)
+                           
+                            @php
+
+                                for($a = 0; $a < count($dieta); $a++) {
+
+                                if($comidas[$i]->ID_Comida == $dieta[$a]->ID_Comida) {
+                                    $objJson = json_decode($dieta[$a]->Dieta, true);
+                                    break;
+                                }
+
+                                }
+
+                                
+                            @endphp
+
+                            @if($i <= 0)
+                                <div id="{{ $comidas[$i]->Comida }}" class='Dieta-Container-Comida Selected-Dieta'>
+                            @else 
+                                <div id="{{ $comidas[$i]->Comida }}" class='Dieta-Container-Comida'>
+                            @endif
+
+                            <div class='Dieta-Tabla-Comidas'>
+
+                                @if(!empty($objJson["Dieta"])) 
+
+                                    <ul>
+                                    <li><span>Comidas</span></li>
     
+                                    @for($c = 0; $c < count($objJson["Dieta"]); $c++)
+    
+                                    <li><input type='text' class='Dieta-Comida' value=" {{ $objJson["Dieta"][$c]["Comida"] }}"></li>
+    
+                                    @endfor
+    
+                                    </ul>
+                                    <ul>
+                                    <li><span>Calorias</span></li>
+    
+                                    @for($c = 0; $c < count($objJson["Dieta"]); $c++) 
+                                      @php 
+                                        $caloriasTotales += $objJson["Dieta"][$c]["Calorias"];
+                                      @endphp
+                                        <li><input type='number' class='Dieta-Calorias' value="{{ $objJson["Dieta"][$c]["Calorias"] }}"><span class='labelCal'>Kl</span></li>
+    
+                                    @endfor
+    
+                                    </ul>
+                                 @else 
+    
+                                           <ul>
+                                            <li><span>Comidas</span></li>
+                                            <li><input type='text' class='Dieta-Comida'></li>
+                                            <li><input type='text' class='Dieta-Comida'></li>
+                                            <li><input type='text' class='Dieta-Comida'></li>
+                                        </ul>
+                                        <ul>
+                                            <li><span>Calorias</span></li>
+                                            <li><input type='number' class='Dieta-Calorias'><span class='labelCal'>Kl</span></li>
+                                            <li><input type='number' class='Dieta-Calorias'><span class='labelCal'>Kl</span></li>
+                                            <li><input type='number' class='Dieta-Calorias'><span class='labelCal'>Kl</span></li>
+                                        </ul>
+    
+                                @endif
+
+                            </div>
+
+                            <button class='Dieta-Comida-btnGuardar' value="{{$comidas[$i]->ID_Comida }}">Guardar</button>
+
+                        </div>
+ 
+                           @endfor
     
                         </div>
     
@@ -853,15 +946,31 @@
                         </div>
                         
                         <div class="Dieta-Avance-Container">
+
+                            @php 
+
+							$alturaCuadrado = session()->get('Esatura') * session()->get('Esatura');
+
+							$IMC = session()->get('Peso') / $alturaCuadrado;
+							$rangoBajo = 18.5 * $alturaCuadrado;
+							$rangoAlto = 25 * $alturaCuadrado;
+
+							$rangoBajo = number_format($rangoBajo, 2);
+							$rangoAlto = number_format($rangoAlto, 2);
+
+							$pesoIdeal = ($rangoBajo + $rangoAlto)/2;
+							$pesoIdeal = number_format($pesoIdeal, 2);
+
+						@endphp
     
                             <div class="Dieta-Avance-Contenido">
-                                 <span class="Dieta-IMC"></span>
+                                 <span class="Dieta-IMC">{{ $IMC }}</span>
                             </div>
                             <div class="Dieta-Avance-Contenido">
-                                 <span class="Dieta-Rango-Peso"></span>
+                                 <span class="Dieta-Rango-Peso">{{ $rangoBajo }} - {{ $rangoAlto }}</span>
                             </div>
                             <div class="Dieta-Avance-Contenido">
-                                 <span class="Dieta-Peso-Ideal"></span>
+                                 <span class="Dieta-Peso-Ideal">{{ $pesoIdeal }}</span>
                             </div>
                         
                         </div>
@@ -902,7 +1011,7 @@
         </div>
 
     <script type="text/javascript" src="{{ URL::to('js/jquery-3.6.0.min.js') }}"></script>
-    <script type="text/javascript" src="{{ URL::to('js/indexMobileJS.js') }}"></script>
+    <script type="text/javascript" src="{{ URL::to('js/IndexMobileJS.js') }}"></script>
     <script type="text/javascript" src="{{ URL::to('js/ActualizacionMobileJS.js') }}"></script>
     <script type="text/javascript" src="{{ URL::to('js/ProgresoMobile.js') }}"></script>
     <script type="text/javascript" src="{{ URL::to('js/RepeticionesMobileJS.js') }}"></script>

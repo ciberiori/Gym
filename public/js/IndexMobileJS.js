@@ -74,8 +74,7 @@ $(document).ready(function() {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/usuarios/logout',
 			data: {'Metodo' : Metodo},
 			dataType: 'json',
 			async: true,
@@ -83,7 +82,7 @@ $(document).ready(function() {
 
 				if(data) {
 
-					window.location.replace('LoginMobile.php');
+					window.location.replace('/');
 
 				} else {
 

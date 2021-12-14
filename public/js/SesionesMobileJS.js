@@ -41,8 +41,7 @@ $(document).ready(function() {
 			$.ajax({
 
 				type: 'GET',
-				url: 'Consultas/DataConsulter.php',
-				contentType: 'application/json; charset=utf-8',
+				url: '/sesion/obtenerSesionesUsuario',
 				data: datos,
 				dataType: 'json',
 				async: true,
@@ -149,8 +148,7 @@ $(document).ready(function() {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/repeticiones/obtenerAreasPorRegion',
 			data: {'Metodo' : Metodo, 'Region' : region},
 			dataType: 'json',
 			async: true,
@@ -216,8 +214,7 @@ function loadEjercicios(area) {
 		$.ajax({
 
 			type: 'GET',
-			url: 'Consultas/DataConsulter.php',
-			contentType: 'application/json; charset=utf-8',
+			url: '/repeticiones/obtenerEjerciciosPorArea',
 			data: {'Metodo' : Metodo, 'Area' : area},
 			dataType: 'json',
 			async: true,

@@ -38,8 +38,7 @@ $(document).ready(function() {
 			$.ajax({
 
 				type: 'GET',
-				url: 'Consultas/DataConsulter.php',
-				contentType: 'application/json; charset=utf-8',
+				url: '/usuarios/actualizarDatosPersonales',
 				data: datos,
 				dataType: 'json',
 				async: true,
@@ -91,8 +90,7 @@ $(document).ready(function() {
 			$.ajax({
 
 				type: 'GET',
-				url: 'Consultas/DataConsulter.php',
-				contentType: 'application/json; charset=utf-8',
+				url: '/usuarios/actualizarCredenciales',
 				data: datos,
 				dataType: 'json',
 				async: true,
