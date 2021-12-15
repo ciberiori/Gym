@@ -24,7 +24,7 @@
 	left: 0px;
 	width: 100%;
 	height: 100%;
-	background-image: url('../Images/fondoIndexMobile.jpg');
+	background-image: url('../images/fondoIndexMobile.jpg');
 	background-size: 100% 100%;
 	z-index: -2;
 
@@ -186,7 +186,7 @@
 	height: 80%;
 	z-index: 4;
 	transform: translateY(-50%);
-	background-image: url('../Images/Logo-Opciones.png');
+	background-image: url('../images/Logo-Opciones.png');
 	background-size: 100% 80%;
     background-position-y: 20px;
 	background-repeat: no-repeat;
@@ -256,7 +256,7 @@
 	width: 100px;
 	height: 60px;
 	z-index: 6;
-	background-image: url('../Images/Logo-Menu.png');
+	background-image: url('../images/Logo-Menu.png');
 	background-size: 75% 100%;
 	background-repeat: no-repeat;
 
@@ -386,7 +386,7 @@
 	height: 60px;
 	z-index: 4;
 	transform: translateY(-50%);
-	background-image: url('../Images/Logo-Menu.png');
+	background-image: url('../images/Logo-Menu.png');
 	background-size: 75% 100%;
 	background-repeat: no-repeat;
 
@@ -401,7 +401,7 @@
 	height: 60px;
 	z-index: 4;
 	transform: translateY(-50%);
-	background-image: url('../Images/Logo-Opciones.png');
+	background-image: url('../images/Logo-Opciones.png');
 	background-size: 100% 150%;
     background-position-y: -15px;
 	background-repeat: no-repeat;

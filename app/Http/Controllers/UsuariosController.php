@@ -77,7 +77,7 @@ class UsuariosController extends Controller
             return response()->json(false);
         }else{
             
-            session()->put("Pass",$pass);
+            session()->put("Pass",$password);
         }
 
         return response()->json(true);
