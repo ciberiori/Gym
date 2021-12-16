@@ -6,6 +6,7 @@ use App\Http\Controllers\UsuariosController;
 use App\Http\Controllers\RepeticionesController;
 use App\Http\Controllers\ProgresoController;
 use App\Http\Controllers\SesionController;
+use App\Http\Controllers\DietaController;
 
 
 Route::get('/', [FrontendController::class,"login"]);
@@ -35,5 +36,7 @@ Route::get('/progreso/obtenerAnioActual',[ProgresoController::class,"ObtenerAnio
 Route::get('/progreso/obtenerDatosProgreso',[ProgresoController::class,"ObtenerDatosProgreso"]);
 
 Route::get('/sesion/obtenerSesionesUsuario',[SesionController::class,"ObtenerSesionesUsuario"]);
+
+Route::get('/dieta/persistirDietaUsuario',[DietaController::class,"PersistirDietaUsuario"]);
 
 

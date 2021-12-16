@@ -104,7 +104,7 @@ $(document).ready(function() {
 				$.ajax({
 
 					type: 'GET',
-					url: 'Consultas/DataConsulter.php',
+					url: '/dieta/persistirDietaUsuario',
 					contentType: 'application/json; charset=utf-8',
 					data: datos,
 					dataType: 'json',

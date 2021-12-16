@@ -956,7 +956,7 @@
 							$alturaCuadrado = session()->get('Estatura') * session()->get('Estatura');
 
 							$IMC = session()->get('Peso') / $alturaCuadrado;
-                         
+                            $IMC=number_format($IMC,2);
 							$rangoBajo = 18.5 * $alturaCuadrado;
 							$rangoAlto = 25 * $alturaCuadrado;
 
